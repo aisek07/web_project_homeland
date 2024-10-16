@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 34px 0 34px;
+}
+.header__logo {
+  width: 254px;
+  height: 70px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__logo {
+    height: 66px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .header__logo {
+    height: 52px;
+    width: 188px;
+  }
+}
