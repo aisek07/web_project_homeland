@@ -52,12 +52,14 @@
 
 @media screen and (max-width: 544px) {
   .lead__title {
-    max-width: 228px;
+    max-width: unset;
+    width: 100%;
     font-size: 40px;
     line-height: 44px;
   }
   .lead__subtitle {
-    max-width: 288px;
+    max-width: unset;
+    width: 100%;
     font-size: 16px;
     line-height: 20px;
   }
