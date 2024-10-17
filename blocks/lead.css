@@ -42,7 +42,7 @@
   .lead__subtitle {
     max-width: 720px;
     font-size: 30px;
-    line-break: 36px;
+    line-height: 36px;
   }
   .lead__image {
     max-width: unset;
