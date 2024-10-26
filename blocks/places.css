@@ -1,7 +1,23 @@
 .place {
   display: grid;
-  grid-template-columns: repeat(2, 984px);
+  grid-template-columns: 460px 1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "title artist"
+    "image paragraph"
+    "buttom paragraph";
+  grid-gap: 48px 40px;
 }
+
+.places {
+  width: 984px;
+  margin: 0 auto;
+}
+
+.place__item {
+  margin: 0 0 80px;
+}
+
 .place__title {
   font-family: "Inter";
   font-size: 72px;
@@ -9,15 +25,16 @@
   line-height: 76px;
   text-align: left;
   color: white;
-  max-width: 460px;
-  height: 228px;
-  margin: 92px 672px 48px 148px;
+  grid-area: title;
+  align-self: end;
+  margin: 0;
+  margin-top: 92px;
 }
 .place__image {
   width: 460px;
   height: 460px;
-  margin: 48px 40px 48px 148px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+  grid-area: image;
 }
 
 .place__paragraphs {
@@ -29,34 +46,44 @@
   height: 261px;
   column-gap: 40px;
   row-gap: 25px;
-  margin: 48px 148px 25px 40px;
+  grid-area: paragraph;
 }
-.place__author {
-  font-size: "Inter";
-  font-weight: 400;
-  font-size: 18px;
 
-  color: white;
+.place__paragraph {
+  margin: 25px 0 0;
+}
+.place__paragraph:first-child {
+  margin-top: 0;
 }
 
 .place__copyrght {
+  grid-area: artist;
+  align-self: end;
+  font-family: "Inter";
+}
+
+.place__artist {
   max-width: 456px;
   height: 15px;
   font-family: "Inter";
   font-weight: 400;
   font-size: 12px;
-  margin: 250px 546.83px 8px 40px;
   color: #aaaaaa;
 }
+
+.place__author {
+  font-weight: 400;
+  font-size: 18px;
+  height: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
 .place__button {
   width: 356px;
   height: 48px;
-  top: 3187px;
-  right: 20px;
-  bottom: 13px;
-  left: 148px;
   color: white;
-  margin: 48px 775.92px 0 148px;
   background: linear-gradient(#0278fe, #003a7b);
   cursor: pointer;
   border: none;
@@ -64,6 +91,7 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   font-family: "Inter";
   font-weight: 600;
-  size: 18px;
+  font-size: 18px;
   line-height: 21.78px;
+  grid-area: buttom;
 }
