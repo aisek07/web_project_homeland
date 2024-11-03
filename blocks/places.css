@@ -43,7 +43,7 @@
   font-size: 18px;
   line-height: 29.34px;
   max-width: 484px;
-  height: 261px;
+  min-height: min-content;
   column-gap: 40px;
   row-gap: 25px;
   grid-area: paragraph;
@@ -111,11 +111,13 @@
     font-size: 42px;
     line-height: 46px;
     max-width: 340px;
+    grid-area: title;
   }
   .place__artist {
     max-width: 352px;
     line-height: 14.52px;
     font-size: 12px;
+    grid-area: artist;
   }
   .place__author {
     max-width: 352px;
@@ -126,6 +128,7 @@
     max-width: 355px;
     font-size: 18px;
     line-height: 21.78px;
+    grid-area: buttom;
   }
   .place__copyrght {
     grid-area: artist;
@@ -141,6 +144,7 @@
   }
   .place__paragraph {
     margin: 25px 0 0;
+    grid-area: paragraph;
   }
   .place__paragraph:first-child {
   }
@@ -158,12 +162,15 @@
 @media screen and (max-width: 544px) {
   .place {
     display: grid;
-    grid-template-columns: 288px;
+    grid-template-columns: 100%;
     grid-template-rows: auto auto 1fr;
     grid-template-areas:
-      "title artist"
-      "image paragraph"
-      "buttom paragraph";
+      "title"
+      " artist"
+      "image"
+      " paragraph"
+      "paragraph"
+      "place__button";
     padding: 0 16px;
   }
   .place__title {
@@ -171,12 +178,14 @@
     width: 100%;
     font-size: 32px;
     line-height: 35px;
+    grid-area: title;
   }
   .place__artist {
     max-width: unset;
     width: 100%;
     line-height: 14.52px;
     font-size: 12px;
+    grid-area: artist;
   }
   .place__author {
     max-width: unset;
@@ -187,6 +196,7 @@
     max-width: 288px;
     font-size: 14px;
     line-height: 16.94px;
+    grid-area: place__button;
   }
   .place__copyrght {
     grid-area: artist;
@@ -194,13 +204,18 @@
   }
   .place__image {
     width: 100%;
-    height: 320px;
+    height: 100%;
+    object-fit: cover;
     grid-area: image;
+    position: relative;
+    overflow: hidden;
+    background-size: cover !important;
   }
   .place__item {
   }
   .place__paragraph {
     margin: 25px 0 0;
+    grid-area: paragraph;
   }
   .place__paragraph:first-child {
   }
@@ -210,5 +225,7 @@
     font-size: 16px;
   }
   .places {
+    width: 320px;
+    margin: 0 auto;
   }
 }
