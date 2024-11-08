@@ -29,6 +29,24 @@
   }
 }
 
+@media screen and (max-width: 820px) {
+  .photo_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 352px);
+    column-gap: 16px;
+    row-gap: 16px;
+    align-items: center;
+    padding: 24px;
+    margin: 0 auto;
+    max-width: 768px;
+  }
+  .grid__image {
+    width: 352px;
+    height: 264px;
+    align-items: center;
+  }
+}
+
 @media screen and (max-width: 544px) {
   .photo_grid {
     display: grid;
