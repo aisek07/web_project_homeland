@@ -6,23 +6,26 @@
   align-items: center;
 }
 
-.item__image {
-  width: 100%;
+.grid__image {
+  width: 284px;
   height: 213px;
 }
 
 @media screen and (max-width: 1024px) {
   .photo_grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 352px);
     column-gap: 16px;
     row-gap: 16px;
     align-items: center;
     padding: 24px;
+    margin: 0 auto;
+    max-width: 768px;
   }
-  .item__image {
-    width: 100%;
+  .grid__image {
+    width: 352px;
     height: 264px;
+    align-items: center;
   }
 }
 
@@ -31,6 +34,8 @@
     display: grid;
     grid-template-columns: 1fr;
   }
-  .item__image {
+  .grid__image {
+    width: 100%;
+    height: 100%;
   }
 }

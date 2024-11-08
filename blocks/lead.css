@@ -48,6 +48,10 @@
     max-width: unset;
     width: 100%;
   }
+
+  .lead {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 544px) {
