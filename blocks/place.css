@@ -9,10 +9,6 @@
   grid-gap: 48px 40px;
 }
 
-.place__item {
-  margin: 0 0 80px;
-}
-
 .place__title {
   font-family: "Inter";
   font-size: 72px;
@@ -150,9 +146,7 @@
     height: 340px;
     grid-area: image;
   }
-  .place__item {
-    margin: 0 0 80px;
-  }
+  
   .place__paragraph {
     margin: 25px 0 0;
     grid-area: paragraph;
@@ -215,9 +209,7 @@
     object-fit: cover;
     grid-area: image;
   }
-  .place__item {
-    margin: 0;
-  }
+  
   .place__paragraph {
     margin: 25px auto;
     grid-area: paragraph;

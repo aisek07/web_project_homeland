@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+.places__item {
+  margin: 0 0 80px;
+}
+
 @media screen and (max-width: 1024px) {
   .places {
     width: 720px;
@@ -14,6 +18,10 @@
   .places {
     width: 100%;
     min-width: 320px;
+    margin: 0;
+  }
+
+  .places__item {
     margin: 0;
   }
 }
