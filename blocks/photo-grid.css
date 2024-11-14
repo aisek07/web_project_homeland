@@ -47,6 +47,24 @@
   }
 }
 
+@media screen and (min-width: 545px) and (max-width: 760px) {
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 340px);
+    column-gap: 16px;
+    row-gap: 16px;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 740px;
+  }
+  .photo-grid__image {
+    width: 325px;
+    height: 220px;
+    align-items: center;
+  }
+}
+
 @media screen and (max-width: 544px) {
   .photo-grid {
     display: grid;
