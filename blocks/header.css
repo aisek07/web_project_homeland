@@ -14,6 +14,9 @@
   .header__logo {
     height: 66px;
   }
+  .header {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 544px) {
@@ -25,8 +28,5 @@
 @media screen and (min-width: 545px) and (max-width: 760px) {
   .header__logo {
     height: 66px;
-  }
-  .header {
-    width: 750px;
   }
 }
